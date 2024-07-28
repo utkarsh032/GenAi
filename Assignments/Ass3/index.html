@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Shayari/Joke Generator</title>
+  </head>
+  <body>
+    <header>
+      <h1>Generate Shayari/Joke</h1>
+    </header>
+    <div class="container">
+      <input type="text" id="inputField" placeholder="Enter a prompt here..." />
+      <br />
+      <select id="typeSelector">
+        <option value="shayari">Shayari</option>
+        <option value="joke">Joke</option>
+      </select>
+      <br />
+      <button onclick="generateContent()">Generate</button>
+    </div>
+
+    <script>
+      function generateContent() {
+        const input = document.getElementById("inputField").value;
+        const type = document.getElementById("typeSelector").value;
+        alert(`Generating ${type} for: ${input}`);
+        // Here you would add code to generate and display the content.
+      }
+    </script>
+  </body>
+</html>

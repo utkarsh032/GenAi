@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  background: rgb(255, 228, 0); /* Light yellow background */
+  color: #4a0000; /* Maroon text */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: rgb(255, 204, 0); /* Darker yellow for the header */
+  color: #4a0000; /* Maroon text */
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+.container {
+  padding: 20px;
+  background: rgb(255, 248, 204); /* Light yellow background */
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  margin: 0;
+  font-size: 2em;
+}
+input[type="text"] {
+  padding: 10px;
+  border: 2px solid #4a0000; /* Maroon border */
+  border-radius: 5px;
+  font-size: 1em;
+  width: 80%;
+  max-width: 300px;
+}
+select {
+  padding: 10px;
+  border: 2px solid #4a0000; /* Maroon border */
+  border-radius: 5px;
+  font-size: 1em;
+  margin: 10px 0;
+  background: #fff;
+  color: #4a0000;
+}
+button {
+  padding: 10px 20px;
+  background: #4a0000; /* Maroon background */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+button:hover {
+  background: #6d1b1b; /* Darker maroon on hover */
+}
