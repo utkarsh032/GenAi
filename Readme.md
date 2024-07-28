@@ -1,3 +1,7 @@
+DEMO VIDEO : https://www.linkedin.com/posts/utkarsh-raj032_nexusai-generativeai-webdevelopment-activity-7223332149783883777-TM7t?utm_source=share&utm_medium=member_desktop
+
+
+
 # Nexus AI
 
 Nexus AI is a cutting-edge web application that leverages Google’s Generative AI API to create stunning and unique images based on user prompts. This project combines an intuitive UI with powerful backend functionality to deliver a seamless and engaging user experience.
