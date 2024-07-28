@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teachable Machine Image Model</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(240, 248, 255);
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      header {
+        width: 100%;
+        padding: 20px;
+        background-color: rgb(76, 175, 80);
+        color: white;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5em;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 1200px;
+        margin: 20px auto;
+      }
+
+      .camera-container,
+      .output-container {
+        flex: 1;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .camera-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      button {
+        background-color: rgb(33, 150, 243);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1.2em;
+        transition: background-color 0.3s;
+        margin-bottom: 20px;
+      }
+
+      button:hover {
+        background-color: rgb(30, 136, 229);
+      }
+
+      #webcam-container {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      #webcam-container canvas {
+        border: 2px solid rgb(76, 175, 80);
+        border-radius: 8px;
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+      }
+
+      #label-container div {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1em;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: rgb(76, 175, 80);
+        color: white;
+        width: 100%;
+        position: relative;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Teachable Machine Image Model</h1>
+    </header>
+    <div class="container">
+      <div class="camera-container">
+        <button type="button" id="toggle-button" onclick="toggleCamera()">
+          Start
+        </button>
+        <div id="webcam-container"></div>
+      </div>
+      <div class="output-container">
+        <div id="label-container"></div>
+      </div>
+    </div>
+    <footer>&copy; 2024 Your Company. All rights reserved.</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
+      const URL = "https://teachablemachine.withgoogle.com/models/AxGQJHP77/";
+
+      let model, webcam, labelContainer, maxPredictions;
+      let isCameraOn = false;
+
+      async function init() {
+        const modelURL = URL + "model.json";
+        const metadataURL = URL + "metadata.json";
+
+        model = await tmImage.load(modelURL, metadataURL);
+        maxPredictions = model.getTotalClasses();
+
+        const flip = true;
+        webcam = new tmImage.Webcam(400, 400, flip);
+        await webcam.setup();
+        await webcam.play();
+        window.requestAnimationFrame(loop);
+
+        document.getElementById("webcam-container").appendChild(webcam.canvas);
+        labelContainer = document.getElementById("label-container");
+        for (let i = 0; i < maxPredictions; i++) {
+          labelContainer.appendChild(document.createElement("div"));
+        }
+      }
+
+      async function loop() {
+        if (isCameraOn) {
+          webcam.update();
+          await predict();
+          window.requestAnimationFrame(loop);
+        }
+      }
+
+      async function predict() {
+        const prediction = await model.predict(webcam.canvas);
+        for (let i = 0; i < maxPredictions; i++) {
+          const classPrediction =
+            prediction[i].className +
+            ": " +
+            prediction[i].probability.toFixed(2);
+          labelContainer.childNodes[i].innerHTML = classPrediction;
+        }
+      }
+
+      function toggleCamera() {
+        const button = document.getElementById("toggle-button");
+        if (!isCameraOn) {
+          init();
+          button.textContent = "Stop";
+        } else {
+          webcam.stop();
+          document.getElementById("webcam-container").innerHTML = "";
+          labelContainer.innerHTML = "";
+          button.textContent = "Start";
+        }
+        isCameraOn = !isCameraOn;
+      }
+    </script>
+  </body>
+</html>
