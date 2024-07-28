@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Generator</title>
+    <link rel="stylesheet" href="image-generator.css" />
+  </head>
+  <body>
+    <header class="top-navbar">
+      <div class="nav-logo">
+        <a href="/">
+          <img src="../images/Logo.png" alt="Logo" />
+        </a>
+      </div>
+
+      <button class="nav-toggle">
+        <div class="nav-icon"></div>
+        <div class="nav-icon"></div>
+        <div class="nav-icon"></div>
+      </button>
+      <button class="chatbot-button">Chatbot</button>
+    </header>
+    <main>
+      <div class="container">
+        <h1>Image Generator</h1>
+        <form id="image-generator-form">
+          <input
+            id="input"
+            type="text"
+            placeholder="Enter your image prompt"
+            required
+          />
+          <button id="btn" type="submit">Generate</button>
+        </form>
+        <div id="output" class="output">
+          <img id="image" alt="Generated Image" />
+        </div>
+      </div>
+    </main>
+    <script src="image-generator.js"></script>
+  </body>
+</html>
