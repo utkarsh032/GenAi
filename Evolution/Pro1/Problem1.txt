@@ -1,0 +1,21 @@
+1. Creative Media Showcase | React.js | RESTful API
+Match Percentage: 85%
+Reasons:
+Utilizes React.js, which is essential for the role.
+Involves RESTful API integration, a key requirement.
+Focuses on responsive design and user interface development.
+Directly aligns with Dashtoon’s emphasis on visual storytelling and interactive design.
+2. Animated Data Dashboard | React.js | D3.js | CSS Grid
+Match Percentage: 80%
+Reasons:
+Uses React.js, aligning with the job's core technology.
+Incorporates CSS Grid for responsive layout, relevant for creating visually appealing interfaces.
+Involves D3.js, which may be less directly relevant but adds value to the skill set.
+Emphasizes interactive and animated visualizations, which matches the creative aspect of the role.
+3. Responsive Content Management System (CMS) | React.js | Tailwind CSS | RESTful API
+Match Percentage: 90%
+Reasons:
+Utilizes React.js and RESTful APIs, directly matching the core requirements of the role.
+Includes Tailwind CSS, relevant for modern UI design and responsive layouts.
+Focuses on building a scalable and user-friendly CMS, which aligns with the responsibilities of developing high-quality, reusable code and enhancing user experience.
+Strong emphasis on responsiveness and performance, which is crucial for the position.
