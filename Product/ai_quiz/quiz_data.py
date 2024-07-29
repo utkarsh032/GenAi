@@ -2,53 +2,53 @@
 
 questions = [
     {
-        "question": "What is the capital of France?",
-        "options": ["Berlin", "Madrid", "Paris", "Rome"],
-        "answer": "Paris"
+        "question": "What is the chemical symbol for gold?",
+        "options": ["Au", "Ag", "Fe", "Pb"],
+        "answer": "Au"
     },
     {
-        "question": "What is the largest planet in our solar system?",
-        "options": ["Earth", "Jupiter", "Mars", "Saturn"],
-        "answer": "Jupiter"
+        "question": "Who painted the Sistine Chapel ceiling?",
+        "options": ["Leonardo da Vinci", "Michelangelo", "Raphael", "Van Gogh"],
+        "answer": "Michelangelo"
     },
     {
-        "question": "Which element has the chemical symbol 'O'?",
-        "options": ["Oxygen", "Gold", "Silver", "Iron"],
-        "answer": "Oxygen"
+        "question": "What is the smallest planet in our solar system?",
+        "options": ["Mercury", "Mars", "Venus", "Earth"],
+        "answer": "Mercury"
     },
     {
-        "question": "Who wrote 'To Kill a Mockingbird'?",
-        "options": ["Harper Lee", "Mark Twain", "J.K. Rowling", "Ernest Hemingway"],
-        "answer": "Harper Lee"
+        "question": "Which element has the atomic number 1?",
+        "options": ["Helium", "Hydrogen", "Oxygen", "Carbon"],
+        "answer": "Hydrogen"
     },
     {
-        "question": "What is the hardest natural substance on Earth?",
-        "options": ["Gold", "Iron", "Diamond", "Platinum"],
-        "answer": "Diamond"
+        "question": "Who wrote the play 'Romeo and Juliet'?",
+        "options": ["William Shakespeare", "Charles Dickens", "Jane Austen", "Mark Twain"],
+        "answer": "William Shakespeare"
     },
     {
-        "question": "Which planet is known as the Red Planet?",
-        "options": ["Earth", "Mars", "Venus", "Mercury"],
-        "answer": "Mars"
+        "question": "What is the longest river in the world?",
+        "options": ["Amazon", "Nile", "Yangtze", "Mississippi"],
+        "answer": "Nile"
     },
     {
-        "question": "What is the chemical symbol for water?",
-        "options": ["H2O", "O2", "CO2", "NaCl"],
-        "answer": "H2O"
+        "question": "What is the main language spoken in Brazil?",
+        "options": ["Spanish", "Portuguese", "English", "French"],
+        "answer": "Portuguese"
     },
     {
-        "question": "Who painted the Mona Lisa?",
-        "options": ["Leonardo da Vinci", "Vincent van Gogh", "Claude Monet", "Pablo Picasso"],
-        "answer": "Leonardo da Vinci"
+        "question": "What is the largest ocean on Earth?",
+        "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+        "answer": "Pacific Ocean"
     },
     {
-        "question": "What is the smallest prime number?",
-        "options": ["1", "2", "3", "5"],
-        "answer": "2"
+        "question": "Who is known as the 'Father of Computers'?",
+        "options": ["Charles Babbage", "Alan Turing", "Ada Lovelace", "John von Neumann"],
+        "answer": "Charles Babbage"
     },
     {
-        "question": "In which year did the Titanic sink?",
-        "options": ["1912", "1905", "1898", "1920"],
-        "answer": "1912"
+        "question": "What is the capital city of Australia?",
+        "options": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+        "answer": "Canberra"
     }
 ]
